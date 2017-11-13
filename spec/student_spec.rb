@@ -115,7 +115,7 @@ describe Student do
       Student.new({name: "Susan", grade: 10}).save
       expect(Student.find_by({name: "Susan"})).to eq([{"id"=>1, "name"=>"Susan", "grade"=>10, 0=>1, 1=>"Susan", 2=>10}])
     end
-  
+
     it 'accounts for when an attribute value is an integer' do
       Student.new({name: "Susan", grade: 10}).save
       expect(Student.find_by({grade: 10})).to eq([{"id"=>1, "name"=>"Susan", "grade"=>10, 0=>1, 1=>"Susan", 2=>10}])
